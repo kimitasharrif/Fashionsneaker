@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoeDetailActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Women Shoes"
+        android:id="@+id/shoe_brand"
+        android:textSize="16sp"
+        android:textColor="#9C9B9B"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Addidas Gradas"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/shoe_name"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"/>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/sh1"
+        android:padding="50dp"
+        android:id="@+id/shoe_image"
+        android:scaleType="centerCrop"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardElevation="90dp"
+        app:cardCornerRadius="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:textSize="15sp"
+            android:id="@+id/shoe_description"
+            android:layout_marginLeft="18dp"
+            android:textColor="#605E5E"
+            android:text="	Classic slip-on with Stan Smith’s iconic design and premium leather. Combines style with comfort"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="105dp"/>
+
+        <!-- Quantity Section with Plus and Minus Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="145dp">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                app:cornerRadius="7dp"
+                android:textSize="20sp"
+                android:backgroundTint="#FF5722"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                app:icon="@drawable/minus"
+                app:iconGravity="textStart"
+                app:iconPadding="1dp"/>
+
+            <EditText
+                android:id="@+id/edit_quantity"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#FF5722"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                app:cornerRadius="7dp"
+                android:textColor="@android:color/black"
+                app:icon="@drawable/plus"
+                app:iconGravity="textStart"
+                app:iconPadding="1dp"/>
+        </LinearLayout>
+        <!-- Size Selection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="208dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="Size:"/>
+
+            <Spinner
+                android:id="@+id/size_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:entries="@array/shoe_sizes"/>
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:layout_marginTop="250dp"
+            android:textSize="22sp"
+            android:layout_marginLeft="18dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$60"
+            android:id="@+id/shoe_price"
+            android:textSize="21sp"
+            android:layout_marginTop="285dp"
+            android:layout_marginLeft="18dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="335dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/white"
+            android:id="@+id/order_now_button"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:backgroundTint="#FF5722"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

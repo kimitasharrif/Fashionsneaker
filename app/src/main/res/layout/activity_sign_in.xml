@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="18dp"
+            android:elevation="25dp"
+            android:layout_centerInParent="true">
+
+            <!-- Sign In Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:padding="23dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SNEAKER HUB"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#FF9800"
+                    android:fontFamily="@font/montserrat1"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:background="@drawable/edittext"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:textColorHint="#B0BEC5"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/name" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:background="@drawable/edittext"
+                    android:textColorHint="#B0BEC5"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/password" />
+
+                <Button
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#0E0E0E"
+                    android:layout_marginTop="30dp"
+                    android:padding="2dp"
+                    android:layout_margin="20dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+                <!-- Sign Up Link -->
+                <TextView
+                    android:id="@+id/tv_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? Sign up"
+                    android:textColor="#FF9800"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>
